@@ -250,6 +250,7 @@ RedisClient.prototype.on_connect = function () {
         this.stream.setNoDelay();
     }
     this.stream.setTimeout(0);
+    this.stream.setKeepAlive(true);
 
     this.init_parser();
 
